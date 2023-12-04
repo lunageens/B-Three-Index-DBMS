@@ -6,10 +6,6 @@ This Python script implements a basic Database Management System (DBMS) using a 
 ## 2.   Contents
 - Features
 - Usage
-  - Inserting Records
-  - Updating Records 
-  - Reading Records 
-  - Deleting Records
 - Code Structure
 - Contributing
 
@@ -19,7 +15,17 @@ This Python script implements a basic Database Management System (DBMS) using a 
 - Page management for organizing and handling records.
 
 ## 4.   Usage
-To begin, create an instance of the Controller class with the correct filepath. To close the file and save your changes, use the commit changes method of the Controller class.
+To begin, create an instance of the Controller class with the correct filepath. 
+
+<pre>
+  orm = Controller('myData.bin')
+</pre>
+
+To close the file and save your changes, use the commit changes method of the Controller class.
+
+<pre>
+  orm.commit()
+</pre>
 
 **Inserting Records:**
 To insert a record into the database, use the insert method of the Controller class. Provide the data and schema information.
