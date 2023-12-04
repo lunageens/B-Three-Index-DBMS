@@ -1,0 +1,15 @@
+# Page Constants
+PAGE_SIZE = 4096  # Database Page is normally between 512B and 16KB
+# (offset, length) in slot dir
+OFFSET_SIZE = 2
+LENGTH_SIZE = 2
+SLOT_ENTRY_SIZE = OFFSET_SIZE + LENGTH_SIZE
+
+FREE_SPACE_POINTER_SIZE = 2
+NUMBER_SLOTS_SIZE = 2
+FOOTER_SIZE = FREE_SPACE_POINTER_SIZE + NUMBER_SLOTS_SIZE
+
+# PageDirectory Constants
+PAGE_NUM_SIZE = 3
+FREE_SPACE_SIZE = 3
+CACHE_SIZE = 10
