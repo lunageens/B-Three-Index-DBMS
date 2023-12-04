@@ -1,6 +1,7 @@
 # * Imports
 from src.main.database.page import PageDirectory
 from src.main.utils.constants import *
+import src.main.utils.utils as utils
 import os
 
 
@@ -79,7 +80,7 @@ class HeapFile:
     def read_record(self, byte_id: bytearray):
         page, slot_id = self.find_record(byte_id)
         if page is None:
-            raise ValueError('Record not found!')
+            raise ValueError('Record with this ID is not found!')
         return page.read_record(slot_id)
 
     # Finds and returns the page with the specified page number.

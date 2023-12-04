@@ -5,28 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f6f7a001-bfa3-49b9-a773-97e6db424b5c" name="Changes" comment="Initial Commit">
-      <change afterPath="$PROJECT_DIR$/.idea/Challenge2_Final.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/aws.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/database/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/database/bplus_three.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/database/controller.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/database/heap_file.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/database/page.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/utils/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/utils/constants.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/utils/utils.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/TestDatabase.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/test_database.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/test_fake_users.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/testutils.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/database/bplus_three.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/database/bplus_three.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/database/controller.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/database/controller.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/utils/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/utils/__init__.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -85,7 +67,7 @@
       <recent name="C:\Edu\DatabaseSystems\Challenge2_Final" />
     </key>
   </component>
-  <component name="RunManager" selected="Python tests.Python tests for TestDatabase.TestDatabase">
+  <component name="RunManager" selected="Python.main">
     <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Challenge2_Final" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -188,10 +170,10 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.main" />
         <item itemvalue="Python tests.Python tests for TestDatabase.TestDatabase" />
         <item itemvalue="Python tests.Python tests for TestDatabase.TestDatabase.test_inserts_and_reads" />
         <item itemvalue="Python tests.Tests database" />
-        <item itemvalue="Python.main" />
         <item itemvalue="Python tests.Python tests for test.TestDatabase.TestDatabase.test_inserts_and_reads" />
       </list>
     </recent_temporary>
@@ -205,12 +187,44 @@
       <option name="presentableId" value="Default" />
       <updated>1701636823041</updated>
       <workItem from="1701636828296" duration="17125000" />
-      <workItem from="1701700121617" duration="4394000" />
+      <workItem from="1701700121617" duration="5136000" />
     </task>
+    <task id="LOCAL-00001" summary="Initial Commit">
+      <option name="closed" value="true" />
+      <created>1701704620254</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1701704620254</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="HEAD" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Initial Commit" />
@@ -219,6 +233,6 @@
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Challenge2_Final$.coverage" NAME=" Coverage Results" MODIFIED="1701704103902" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
     <SUITE FILE_PATH="coverage/Challenge2_Final$utils.coverage" NAME="utils Coverage Results" MODIFIED="1701652780463" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/main/utils" />
-    <SUITE FILE_PATH="coverage/Challenge2_Final$__init__.coverage" NAME="main Coverage Results" MODIFIED="1701702569824" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/main" />
+    <SUITE FILE_PATH="coverage/Challenge2_Final$__init__.coverage" NAME="main Coverage Results" MODIFIED="1701705257109" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/main" />
   </component>
 </project>

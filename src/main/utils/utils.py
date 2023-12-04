@@ -66,14 +66,14 @@ def generate_data_with_bplustree(file_path: str, rows: int):
     user_columns = ['id', 'name', 'email', 'phone', 'company', 'street', 'street_number', 'zipcode', 'country',
                     'birthdate']
 
-    # ! I removed the new initiation of new bplusthree, which was what was used before to call the insert method on.
+    # ! I removed the new initiation of new B+ Three, which was what was used before to call the insert method on.
     # The initiation of the BPlusThree should happen automatically:
-    # When a controller is created: makes heapfile in its constructor.
-    # In the constructor of the heapfile, it makes list of page directors and initiates one pagedirectory if needed
-    # In the constructor pagedirectory, he inherits from page objects that get made.
+    # When a controller is created: makes heap file in its constructor.
+    # In the constructor of the heap file, it makes list of page directors and initiates one page directory if needed
+    # In the constructor page directory, he inherits from page objects that get made.
     # In constructor page automatically a new b plus three index is made.
-    # On top of that, we just make csv file in this method. No need for bplus three.
-    # TODO Change name method and documentation in README
+    # On top of that, we just make csv file in this method. No need for B+ Three.
+    # TODO Change name method and documentation in README.
 
     users = []
     fake = Faker()

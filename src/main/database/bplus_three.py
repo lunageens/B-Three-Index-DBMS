@@ -1,6 +1,7 @@
 # * Imports
 from src.main.utils.constants import *
 
+
 # * The BPlusTreeIndex class represents the top-level B+ tree structure and provides methods for inserting and
 # searching for keys.
 class BPlusTreeIndex:
