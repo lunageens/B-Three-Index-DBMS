@@ -61,8 +61,10 @@ def decode_record(byte_array, schema: List[str]):
     return tuple(decoded_fields)
 
 
+# TODO Should this not be in testutils?
+
 #  Generates fake user data and saves the data to a CSV file.
-def generate_data_with_bplustree(file_path: str, rows: int):
+def generate_fake_data(file_path: str, rows: int):
     user_columns = ['id', 'name', 'email', 'phone', 'company', 'street', 'street_number', 'zipcode', 'country',
                     'birthdate']
 
@@ -73,7 +75,6 @@ def generate_data_with_bplustree(file_path: str, rows: int):
     # In the constructor page directory, he inherits from page objects that get made.
     # In constructor page automatically a new b plus three index is made.
     # On top of that, we just make csv file in this method. No need for B+ Three.
-    # TODO Change name method and documentation in README.
 
     users = []
     fake = Faker()

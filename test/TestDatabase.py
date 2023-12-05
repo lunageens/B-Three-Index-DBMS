@@ -25,7 +25,7 @@ class TestDatabase(unittest.TestCase):
         csv_file = "test_fake_users.csv"
         num_rows = 10000
         if not os.path.exists(csv_file):
-            utils.generate_data_with_bplustree(csv_file, num_rows)  # Makes CSV file.
+            utils.generate_fake_data(csv_file, num_rows)  # Makes CSV file.
 
     def setUp(self):
         # Initialize any setup needed before each test
@@ -38,7 +38,7 @@ class TestDatabase(unittest.TestCase):
     def tearDown(self):
         print("Tear down.")
         # Clean up resources after each test
-        # TODO I think I should delete this. I only want this after all tests.
+        # For example:
         # if os.path.exists(self.filepath):
         #  os.remove(self.filepath)
 

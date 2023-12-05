@@ -4,11 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f6f7a001-bfa3-49b9-a773-97e6db424b5c" name="Changes" comment="Initial Commit">
+    <list default="true" id="f6f7a001-bfa3-49b9-a773-97e6db424b5c" name="Changes" comment="Changed main method of main package to do all CRUD operations">
+      <change afterPath="$PROJECT_DIR$/test/TestDBMSFunctionality.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/database/bplus_three.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/database/bplus_three.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/database/controller.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/database/controller.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/database.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/database/heap_file.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/database/heap_file.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/database/page.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/database/page.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/utils/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/utils/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/utils/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/utils/utils.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/TestDatabase.py" beforeDir="false" afterPath="$PROJECT_DIR$/test/TestDatabase.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/test/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/test_database.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/test_fake_users.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/testutils.py" beforeDir="false" afterPath="$PROJECT_DIR$/test/testutils.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,6 +33,20 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "lunageens"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="c45bf790-4279-46ca-af5f-cbdc3a9ea425" />
+        <option name="url" value="https://github.com/lunageens/B-Three-Index-DBMS.git" />
+      </UrlAndAccount>
+    </option>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -67,7 +90,7 @@
       <recent name="C:\Edu\DatabaseSystems\Challenge2_Final" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.main">
+  <component name="RunManager" selected="Python tests.Python tests for TestDBMSFunctionality.TestDBMSFunctionality.test_CRUD_Database">
     <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Challenge2_Final" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -95,7 +118,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="Python tests for TestDatabase.TestDatabase" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+    <configuration name="Python tests for TestDBMSFunctionality.TestDBMSFunctionality" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="Challenge2_Final" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -106,11 +129,11 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;TestDatabase.TestDatabase&quot;" />
+      <option name="_new_target" value="&quot;TestDBMSFunctionality.TestDBMSFunctionality&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="Python tests for TestDatabase.TestDatabase.test_inserts_and_reads" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+    <configuration name="Python tests for TestDBMSFunctionality.TestDBMSFunctionality.test_CRUD_Database" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="Challenge2_Final" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -121,11 +144,11 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;TestDatabase.TestDatabase.test_inserts_and_reads&quot;" />
+      <option name="_new_target" value="&quot;TestDBMSFunctionality.TestDBMSFunctionality.test_CRUD_Database&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="Python tests for test.TestDatabase.TestDatabase.test_inserts_and_reads" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+    <configuration name="Python tests for TestDBMSFunctionality.TestDBMSFunctionality.test_insert_record" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="Challenge2_Final" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -136,45 +159,39 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test.TestDatabase.TestDatabase.test_inserts_and_reads&quot;" />
+      <option name="_new_target" value="&quot;TestDBMSFunctionality.TestDBMSFunctionality.test_insert_record&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="Tests database" type="tests" factoryName="Autodetect" temporary="true">
+    <configuration name="Python tests in TestDBMSFunctionality.py" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="Challenge2_Final" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="C:\Users\lunag\anaconda3\python.exe" />
-      <option name="SDK_NAME" value="Python 3.9" />
+      <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/test" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <EXTENSION ID="software.aws.toolkits.jetbrains.core.execution.PythonAwsConnectionExtension">
-        <option name="credential" />
-        <option name="region" />
-        <option name="useCurrentConnection" value="false" />
-      </EXTENSION>
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test.TestDatabase.TestDatabase&quot;" />
-      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/test/TestDBMSFunctionality.py&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
       <method v="2" />
     </configuration>
     <list>
       <item itemvalue="Python.main" />
-      <item itemvalue="Python tests.Python tests for TestDatabase.TestDatabase" />
-      <item itemvalue="Python tests.Python tests for TestDatabase.TestDatabase.test_inserts_and_reads" />
-      <item itemvalue="Python tests.Python tests for test.TestDatabase.TestDatabase.test_inserts_and_reads" />
-      <item itemvalue="Python tests.Tests database" />
+      <item itemvalue="Python tests.Python tests for TestDBMSFunctionality.TestDBMSFunctionality" />
+      <item itemvalue="Python tests.Python tests for TestDBMSFunctionality.TestDBMSFunctionality.test_CRUD_Database" />
+      <item itemvalue="Python tests.Python tests for TestDBMSFunctionality.TestDBMSFunctionality.test_insert_record" />
+      <item itemvalue="Python tests.Python tests in TestDBMSFunctionality.py" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python tests.Python tests for TestDBMSFunctionality.TestDBMSFunctionality.test_CRUD_Database" />
+        <item itemvalue="Python tests.Python tests in TestDBMSFunctionality.py" />
         <item itemvalue="Python.main" />
-        <item itemvalue="Python tests.Python tests for TestDatabase.TestDatabase" />
-        <item itemvalue="Python tests.Python tests for TestDatabase.TestDatabase.test_inserts_and_reads" />
-        <item itemvalue="Python tests.Tests database" />
-        <item itemvalue="Python tests.Python tests for test.TestDatabase.TestDatabase.test_inserts_and_reads" />
+        <item itemvalue="Python tests.Python tests for TestDBMSFunctionality.TestDBMSFunctionality" />
+        <item itemvalue="Python tests.Python tests for TestDBMSFunctionality.TestDBMSFunctionality.test_insert_record" />
       </list>
     </recent_temporary>
   </component>
@@ -187,7 +204,7 @@
       <option name="presentableId" value="Default" />
       <updated>1701636823041</updated>
       <workItem from="1701636828296" duration="17125000" />
-      <workItem from="1701700121617" duration="5136000" />
+      <workItem from="1701700121617" duration="15569000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit">
       <option name="closed" value="true" />
@@ -197,7 +214,15 @@
       <option name="project" value="LOCAL" />
       <updated>1701704620254</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Changed main method of main package to do all CRUD operations">
+      <option name="closed" value="true" />
+      <created>1701705994714</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1701705994714</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -228,11 +253,12 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Initial Commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="Initial Commit" />
+    <MESSAGE value="Changed main method of main package to do all CRUD operations" />
+    <option name="LAST_COMMIT_MESSAGE" value="Changed main method of main package to do all CRUD operations" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/Challenge2_Final$.coverage" NAME=" Coverage Results" MODIFIED="1701704103902" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
+    <SUITE FILE_PATH="coverage/Challenge2_Final$.coverage" NAME=" Coverage Results" MODIFIED="1701714290643" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
     <SUITE FILE_PATH="coverage/Challenge2_Final$utils.coverage" NAME="utils Coverage Results" MODIFIED="1701652780463" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/main/utils" />
-    <SUITE FILE_PATH="coverage/Challenge2_Final$__init__.coverage" NAME="main Coverage Results" MODIFIED="1701705257109" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/main" />
+    <SUITE FILE_PATH="coverage/Challenge2_Final$__init__.coverage" NAME="main Coverage Results" MODIFIED="1701713196763" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/main" />
   </component>
 </project>

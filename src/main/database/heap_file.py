@@ -14,7 +14,7 @@ class HeapFile:
             with open(file_path, 'rb') as db:
                 pd = PageDirectory(file_path=file_path, data=bytearray(db.read(PAGE_SIZE)))
         else:
-            pd = PageDirectory(file_path) # !Changed this so it also has filepath as parameter
+            pd = PageDirectory(file_path)  # !Changed this so it also has filepath as parameter
         self.page_directories: list[PageDirectory] = [pd]
 
     # Reads and returns the specified PageDirectory, loading it if not already in memory.
@@ -46,7 +46,8 @@ class HeapFile:
     def insert_record(self, data):
         pd: PageDirectory = self.page_directories[0]
 
-        # Iterate over all page dir., if full move to the next one
+        # Attempts to insert the record in an existing page directory.
+        # Iterates over all page dir., if full move to the next directory.
         while not (inserted := pd.insert_record(data)) and pd.next_dir != 0:
             pd = self.read_page_dir(pd)
 
@@ -61,18 +62,21 @@ class HeapFile:
             pd.data[PAGE_NUM_SIZE:PAGE_NUM_SIZE + FREE_SPACE_SIZE] = pd.next_dir.to_bytes(FREE_SPACE_SIZE, 'little')
             self.page_directories.append(new_pd)
             return new_pd.insert_record(data)
-        return True
+        return True  # If record is successfully inserted by either in an existing directory or a newly created one
 
     # Finds and returns the page and slot ID for the record with the specified ID.
     def find_record(self, byte_id: bytearray) -> (int, int):
         pd: PageDirectory = self.page_directories[0]
 
-        while True:
-            if result := pd.find_record(byte_id):
+        while True:  # Initiates an infinite loop to search for the record continuously until it finds it or exhausts
+            # all page directories.
+            if result := pd.find_record(byte_id):  # Calls the find_record method on the current page directory (pd). If
+                # it finds a record with the specified byte_id, it returns the result.
                 return result
-            if pd.next_dir == 0:
+            if pd.next_dir == 0:  # Checks if there is no next directory (pd.next_dir == 0). If true, it breaks out
+                # of the loop since there are no more directories to search.
                 break
-            pd = self.read_page_dir(pd)
+            pd = self.read_page_dir(pd)  # Moves to the next page directory by calling the read_page_dir method.
 
         return None, None
 

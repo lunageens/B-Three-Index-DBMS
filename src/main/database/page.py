@@ -280,7 +280,7 @@ class PageDirectory(Page):
         for offset, length in self.page_footer.slot_dir[1:]:
             data = self.data[offset:offset + length]
             if int.from_bytes(data[:PAGE_NUM_SIZE], 'little') == page_number:
-                # TODO - reading from record that was inserted while file was open and doesn't exist yet gives error
+                # TODO - Reading from record that was inserted while file was open and doesn't exist yet gives error
                 assert self.file_path is not None
                 with open(self.file_path, "rb") as db:
                     db.seek(page_number * PAGE_SIZE)
@@ -302,10 +302,10 @@ class PageDirectory(Page):
     def find_or_create_data_page_for_insert(self, needed_space):
 
         page_num = 0
-        # TODO NOW - minus one since first slot references to page dir. info
+        # TODO NOW - Minus one since first slot references to page dir. info
         for slot_id in range(self.page_footer.slot_count() - 1):
             # loop over slot, read in tuple(record) -> should contain (page num, free space)
-            # TODO NOW - increase slot_id with 1 since first slot will reference page dir. info
+            # TODO NOW - Increase slot_id with 1 since first slot will reference page dir. info
             offset, length = self.page_footer.slot_dir[slot_id + 1]
             record = self.data[offset: offset + length]
             page_num, free_space = int.from_bytes(record[:PAGE_NUM_SIZE], 'little'), int.from_bytes(
@@ -315,7 +315,7 @@ class PageDirectory(Page):
 
         else:
             # no page found make new one
-            # save new page in footer, TODO check if there is still space available to link to next page directory
+            # save new page in footer, TODO Check if there is still space available to link to next page directory
             # Check if there is enough free space in page dir. --> (page_nr, free_space) + slot size
             if (PAGE_NUM_SIZE + FREE_SPACE_SIZE) + SLOT_ENTRY_SIZE > self.free_space():
                 return False
@@ -353,7 +353,6 @@ class PageDirectory(Page):
             if page.is_full():
                 # self.full_pages.append(self.pages.pop(page_number))
                 continue
-
             elif page.insert_record(data):
                 self.update_free_space(nr, page.free_space())
                 return True  # Tuple written successfully
