@@ -61,9 +61,7 @@ orm.delete(id_)
 As always, the distinction between a "main" package and a "test" package typically involves the separation of production code (main) and testing code (test).
 
 ### 5.1.  The **main** package
-The main package consists out of two sub-packages and a file containing a main method.
-
-The init file serves as a practical example or test scenario for showcasing the functionality of the database-related classes and operations within the main package. This file initiates the main package and serves as the entry point for executing database operations. It imports necessary modules, including the Controller class from the src.main.database package. The execution block creates an instance of the Controller class, representing the Object-Relational Mapping (ORM) for a database stored in a file named 'database.bin'. The script then defines a sample record and schema, demonstrating the structure of the data to be inserted into the database. It proceeds to use the Controller instance (orm) to insert the record into the database, followed by committing the changes. Finally, the code prints the time taken for the database operation and the size of the resulting 'database.bin' file. 
+The main package consists out of two sub-packages and a file initiating the package.
 
 The utils and database packages constitute the backbone of the database system. The utils package provides fundamental utilities and constants for efficient data encoding, decoding, and synthetic data generation. On the other hand, the database package encompasses the core functionalities of the database, including page management, record operations, and a B+ tree index implementation. Together, these packages form the essential components for organizing, storing, and manipulating data within the database system.
 
@@ -85,6 +83,8 @@ The following other methods can also be found in the controller class:
 
 - Initialization: The class is initialized with a file path, creating an instance of the HeapFile class for file manipulation.
 - Committing Changes: The _commit_ method closes the heap file, committing any changes made during the operations.
+
+A limitation to the Controller class right now is that data in the same binary file can be inserted with different schemes, but not read. This is why we should make the scheme a parameter of the constructor of the controller instead of a parameter in the CRUD operations functions. 
 
 #### heap_file.py:  _Implements the heap file and page management._
 The `HeapFile` class manages the entire database and organizes data using multiple page directories. It provides methods for handling the insertion, updating, reading, and deletion of records within the database file.
@@ -132,6 +132,8 @@ The `PageFooter` class represents the footer of a page, containing essential inf
 - Slot Count: The _slot_count_ method returns the number of slots in the page footer. 
 - Data Retrieval: The _data_ method returns the data of the page footer.
 
+This class still has certain limitations. For example, reading from a record that was inserted while the file was open or doesn't exist yet gives an error.
+
 #### **b_plus_tree**.py:  _Contains the B+Tree index implementation._ 
 The B+ tree classes maintains balance through splits, ensuring efficient search and insertion operations. The code follows a modular and recursive approach for insertion and search operations. The tree structure is adaptable to handle a dynamic number of keys, optimizing storage and search performance.
 
@@ -151,6 +153,7 @@ Key operations explained:
 The utils package offers crucial utilities and constants for facilitating data management in the broader database framework. Constants in constants.py provide essential parameters, while functions in utils.py handle tasks like encoding, decoding and generating records.
 
 #### __init__.py:   _Empty file initiating the utils package._
+The main block of the file demonstrates how to use the data generation function of utils.py. In this example, it generates 100,000 fake user records and saves them to a CSV file named fake_users.csv.
 
 #### utils.py:  _Includes utility functions for data encoding, decoding and generation._
 The `utils`.py file provides essential utility functions for encoding and decoding data within the database, along with a practical example of generating synthetic data for testing purposes.
@@ -165,8 +168,7 @@ On a lower level, the file provides functions for encoding and decoding data fie
 - _decode_field_: Decodes a field based on its type.
 
 Additionally, there is functionality provided for synthetic Data Generation:
-- The file provides a function named _generate_data_with_bplustree_, which generates synthetic user data for testing purposes. This function utilizes the Faker library to create realistic-looking user records. Additionally, it incorporates a B+ tree index (BPlusTreeIndex from src.main.database.bplus_three) to efficiently index the generated data. 
-- The main block at the end of the file demonstrates how to use the data generation function. In this example, it generates 100,000 fake user records and saves them to a CSV file named fake_users.csv.
+- The file provides a function named _generate_fake_data_, which generates synthetic user data for testing purposes. This function utilizes the Faker library to create realistic-looking user records. 
 
 #### constants.py:  _Storing database page (directory) constants_
 This code defines crucial constants for managing pages in a database, encompassing both individual pages and a higher-level structure known as a Page Directory. These constants play a pivotal role in determining the size, organization, and functionality of the database pages.
@@ -183,7 +185,9 @@ PageDirectory Constants:
 - CACHE_SIZE: Represents the size of the cache used for managing Page Directory entries. This cache helps optimize the retrieval of page-related information within the database.
 
 ### 5.2.  The **test** package:
-This package contains testing of the different CRUD operations and requires additional attention.
+This package contains testing of the different CRUD operations and requires additional attention. The testing is done in two tests:
+- The first test, _test_CRUD_singleRecord_, inserts, read, updates and deletes a single record. It also inserts and reads a second one. This test passes.
+- In the second test, _test_CRUD_Database_, serves as a practical example or test scenario for showcasing the functionality of the database-related classes and operations within the main package. It creates a fake database in a CSV file. The execution block creates an instance of the Controller class, representing the Object-Relational Mapping (ORM) for a database stored in a file named 'test_CRUD_Database.bin'. The script then defines a sample record and schema, demonstrating the structure of the data to be inserted into the database. It proceeds to use the Controller instance (orm) to insert the record into the database, followed by committing the changes. Finally, the code prints the time taken for the database operation and the size of the resulting 'database.bin' file. Then, the CRUD operations are preformed. This test fails and we have yet to find the bug in our code. Note that if you want to correctly rerun this test, u should remove the output bin and csv file every time. 
 
 ## 6. Contributing
-A project of ... for the course Database Systems of professor Len Feremans from the University of Antwerp.
+A project of Ruben for the course Database Systems of professor Len Feremans from the University of Antwerp.
